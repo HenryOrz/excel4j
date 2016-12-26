@@ -16,7 +16,6 @@ public @interface ExcelCol {
 
     String name();
 
-    Format format();
-
+    ExcelFormat format();
 
 }
