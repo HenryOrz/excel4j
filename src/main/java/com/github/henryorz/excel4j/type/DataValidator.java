@@ -1,4 +1,4 @@
-package com.github.henryorz.excel4j.format;
+package com.github.henryorz.excel4j.type;
 
 /**
  * Created by 周恒睿 on 2016/12/28.

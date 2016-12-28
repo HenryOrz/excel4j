@@ -1,8 +1,6 @@
 package com.github.henryorz.excel4j.annotation;
 
-import com.github.henryorz.excel4j.format.DefaultTypeHandler;
-import com.github.henryorz.excel4j.format.ExcelFormat;
-import com.github.henryorz.excel4j.format.TypeHandler;
+import com.github.henryorz.excel4j.type.*;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -25,5 +23,7 @@ public @interface Column {
     Class<?> javaType() default void.class;
 
     Class<? extends TypeHandler<?>> typeHandler() default DefaultTypeHandler.class;
+
+    Class<? extends DataValidator<?>> dataValidator() default DefaultDataValidator.class;
 
 }
