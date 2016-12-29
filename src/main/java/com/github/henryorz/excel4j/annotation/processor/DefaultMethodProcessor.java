@@ -13,9 +13,15 @@ import java.util.Map;
 /**
  * Created by 周恒睿 on 2016/12/28.
  */
-public class Defaultprocessor implements AnnotationProcessor{
+public class DefaultMethodProcessor implements MethodProcessor {
 
-    public SheetConfig getSheetConfig(Method method) {
+    private Method method;
+
+    public DefaultMethodProcessor(Method method){
+        this.method = method;
+    }
+
+    public SheetConfig getSheetConfig() {
 
         SheetConfig sheetConfig = new SheetConfig();
 
@@ -29,6 +35,7 @@ public class Defaultprocessor implements AnnotationProcessor{
         sheetConfig.setSheetName(sheetAnn.sheetName());
         sheetConfig.setRowHead(sheetAnn.rowHead());
         sheetConfig.setRowNum(sheetAnn.rowNum());
+        sheetConfig.setOperation(sheetAnn.operation());
 
         Map<Integer, ColumnConfig> colMap = new HashMap<Integer, ColumnConfig>();
         Columns columnsAnn = method.getAnnotation(Columns.class);

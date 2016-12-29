@@ -8,6 +8,7 @@ import java.util.Map;
  */
 public class SheetConfig {
     private String sheetName;
+    private Operation operation;
     private boolean hasTitle;
     private int rowHead;
     private int rowNum;
@@ -19,6 +20,14 @@ public class SheetConfig {
 
     public void setSheetName(String sheetName) {
         this.sheetName = sheetName;
+    }
+
+    public Operation getOperation() {
+        return operation;
+    }
+
+    public void setOperation(Operation operation) {
+        this.operation = operation;
     }
 
     public boolean isHasTitle() {

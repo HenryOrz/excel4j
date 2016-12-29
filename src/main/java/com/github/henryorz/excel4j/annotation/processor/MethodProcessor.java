@@ -9,6 +9,6 @@ import java.util.List;
 /**
  * Created by 周恒睿 on 2016/12/28.
  */
-public interface AnnotationProcessor {
-    SheetConfig getSheetConfig (Method method);
+public interface MethodProcessor {
+    SheetConfig getSheetConfig();
 }

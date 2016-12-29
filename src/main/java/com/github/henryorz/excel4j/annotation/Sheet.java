@@ -1,5 +1,7 @@
 package com.github.henryorz.excel4j.annotation;
 
+import com.github.henryorz.excel4j.config.Operation;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -16,6 +18,8 @@ public @interface Sheet {
     boolean hasTitle();
 
     String sheetName();
+
+    Operation operation();
 
     int rowHead() default 0;
 
