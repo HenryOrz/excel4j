@@ -1,5 +1,7 @@
 package com.github.henryorz.excel4j.excel;
+import com.github.henryorz.excel4j.config.ColumnConfig;
 import com.github.henryorz.excel4j.config.SheetConfig;
+import com.github.henryorz.excel4j.exceptions.ExcelException;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -10,8 +12,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
+import java.lang.reflect.Method;
+import java.util.*;
 
 
 /**
@@ -21,18 +23,32 @@ public class PoiExcelHandler extends ExcelHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(PoiExcelHandler.class);
 
-    public static ExcelHandler newInstance(SheetConfig config, Class<?> returnType) {
-        return new PoiExcelHandler(config, returnType);
+    public static ExcelHandler newInstance(SheetConfig config) {
+        return new PoiExcelHandler(config);
     }
 
-    private PoiExcelHandler(SheetConfig config, Class<?> returnType){
-        super(config, returnType);
+    private PoiExcelHandler(SheetConfig config){
+        super(config);
     }
 
     @Override
-    protected Object importExcel(InputStream inputStream) throws IOException {
+    protected Object importExcel(InputStream inputStream) throws Exception {
         List<Object> returnList = new ArrayList();
-        Workbook wb = new XSSFWorkbook(inputStream);
+        Workbook wb;
+        try{
+            wb = new XSSFWorkbook(inputStream);
+        } catch (Exception e1) {
+            logger.warn("open as xlsx failed, cause: {}" + e1.getCause());
+            try {
+                wb = new HSSFWorkbook(inputStream);
+            } catch (Exception e2) {
+                logger.warn("open as xls failed, cause: {}" + e1.getCause());
+                throw e2;
+            }
+        }
+        if(wb == null){
+            throw new ExcelException("open excel failed");
+        }
         Sheet sheet = wb.getSheet(config.getSheetName());
         for(int i = config.getRowHead(); i < config.getRowHead()+config.getRowNum(); i++){
             Row row = sheet.getRow(i);
@@ -53,8 +69,15 @@ public class PoiExcelHandler extends ExcelHandler {
         return null;
     }
 
-    private Object getBeanFromRow(Row row){
+    private Object getBeanFromRow(Row row) throws IllegalAccessException, InstantiationException {
         // TODO
+        Class<?> returnType = config.getReturnType();
+        Object retObj = returnType.newInstance();
+        List<Method> getters = new ArrayList<Method>();
+        for (int i= config.getColHead(); i < config.getColHead()+config.getColNum(); i++){
+            String getterName =
+            returnType.getDeclaredMethod();
+        }
         return row.toString();
     }
 }

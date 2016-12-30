@@ -27,13 +27,13 @@ public class MapperProxy implements InvocationHandler {
         SheetConfig config = annProcessor.getSheetConfig();
         ExcelHandler handler = handlerMap.get(method);
         if(handler == null){
-            handler = getDefaultExcelHandler(config, method.getReturnType());
+            handler = getDefaultExcelHandler(config);
         }
         return handler.execute(args);
     }
 
-    protected ExcelHandler getDefaultExcelHandler(SheetConfig config, Class<?> returnType){
-        ExcelHandler excelHandler = PoiExcelHandler.newInstance(config, returnType);
+    protected ExcelHandler getDefaultExcelHandler(SheetConfig config){
+        ExcelHandler excelHandler = PoiExcelHandler.newInstance(config);
         return excelHandler;
     }
 }

@@ -35,7 +35,10 @@ public class DefaultMethodProcessor implements MethodProcessor {
         sheetConfig.setSheetName(sheetAnn.sheetName());
         sheetConfig.setRowHead(sheetAnn.rowHead());
         sheetConfig.setRowNum(sheetAnn.rowNum());
+        sheetConfig.setColHead(sheetAnn.colHead());
+        sheetConfig.setColNum(sheetAnn.colNum());
         sheetConfig.setOperation(sheetAnn.operation());
+        sheetConfig.setReturnType(method.getReturnType());
 
         Map<Integer, ColumnConfig> colMap = new HashMap<Integer, ColumnConfig>();
         Columns columnsAnn = method.getAnnotation(Columns.class);

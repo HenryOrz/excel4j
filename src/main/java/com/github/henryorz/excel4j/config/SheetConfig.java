@@ -12,6 +12,9 @@ public class SheetConfig {
     private boolean hasTitle;
     private int rowHead;
     private int rowNum;
+    private int colHead;
+    private int colNum;
+    private Class<?> returnType;
     private Map<Integer, ColumnConfig> colMap = new HashMap<Integer, ColumnConfig>();
 
     public String getSheetName() {
@@ -52,6 +55,30 @@ public class SheetConfig {
 
     public void setRowNum(int rowNum) {
         this.rowNum = rowNum;
+    }
+
+    public int getColHead() {
+        return colHead;
+    }
+
+    public void setColHead(int colHead) {
+        this.colHead = colHead;
+    }
+
+    public int getColNum() {
+        return colNum;
+    }
+
+    public void setColNum(int colNum) {
+        this.colNum = colNum;
+    }
+
+    public Class<?> getReturnType() {
+        return returnType;
+    }
+
+    public void setReturnType(Class<?> returnType) {
+        this.returnType = returnType;
     }
 
     public Map<Integer, ColumnConfig> getColMap() {

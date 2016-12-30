@@ -16,11 +16,8 @@ public abstract class ExcelHandler {
 
     protected SheetConfig config;
 
-    protected Class<?> returnType;
-
-    public ExcelHandler(SheetConfig config, Class<?> returnType){
+    public ExcelHandler(SheetConfig config){
         this.config = config;
-        this.returnType = returnType;
     }
 
     public SheetConfig getConfig() {
@@ -29,14 +26,6 @@ public abstract class ExcelHandler {
 
     public void setConfig(SheetConfig config) {
         this.config = config;
-    }
-
-    public Class<?> getReturnType() {
-        return returnType;
-    }
-
-    public void setReturnType(Class<?> returnType) {
-        this.returnType = returnType;
     }
 
     public Object execute(Object[] args) throws Exception{
@@ -63,7 +52,7 @@ public abstract class ExcelHandler {
         return null;
     }
 
-    protected abstract Object importExcel(InputStream inputStream) throws IOException;
+    protected abstract Object importExcel(InputStream inputStream) throws Exception;
 
     protected abstract InputStream exportExcel();
 }

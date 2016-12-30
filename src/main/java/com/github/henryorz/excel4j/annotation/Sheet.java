@@ -15,13 +15,17 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Sheet {
 
-    boolean hasTitle();
-
     String sheetName();
 
     Operation operation();
 
+    boolean hasTitle();
+
     int rowHead() default 0;
 
     int rowNum();
+
+    int colHead() default 0;
+
+    int colNum();
 }
