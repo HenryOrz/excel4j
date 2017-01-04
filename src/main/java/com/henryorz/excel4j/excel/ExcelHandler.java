@@ -62,6 +62,7 @@ public abstract class ExcelHandler {
         if (inputStream == null) {
             throw new ExcelOpenException("InputStream is null");
         }
+        ExcelDataSource excelData = new PoiExcelDataSource(inputStream);
 
         List<Object> returnList = new ArrayList<Object>();
 
@@ -70,7 +71,7 @@ public abstract class ExcelHandler {
             Class<?> returnType = config.getReturnType();
             Object obj = returnType.newInstance();
             for (ColumnConfig colConf : colMap.values()) {
-                Object val = getValue(row, colConf.getColumn(), colConf.getExcelFormat(), colConf.getJavaType());
+                Object val = excelData.getValue(row, colConf.getColumn(), colConf.getExcelFormat(), colConf.getJavaType());
                 DataValidator validator = colConf.getDataValidator().newInstance();
                 ResultObject validateResult = validator.validate(val);
                 String setterName = StringUtil.setterName(colConf.getProperty());
