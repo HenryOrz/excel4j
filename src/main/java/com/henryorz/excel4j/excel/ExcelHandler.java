@@ -3,7 +3,6 @@ package com.henryorz.excel4j.excel;
 import com.henryorz.excel4j.config.ColumnConfig;
 import com.henryorz.excel4j.config.SheetConfig;
 import com.henryorz.excel4j.type.DataValidator;
-import com.henryorz.excel4j.type.ExcelFormat;
 import com.henryorz.excel4j.exceptions.*;
 import com.henryorz.excel4j.util.ResultObject;
 import com.henryorz.excel4j.util.StringUtil;
@@ -12,11 +11,11 @@ import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.*;
 
-public abstract class ExcelHandler {
+public class ExcelHandler {
 
     private Logger logger = LoggerFactory.getLogger(ExcelHandler.class);
 
@@ -58,20 +57,29 @@ public abstract class ExcelHandler {
         return null;
     }
 
-    protected Object importExcel(InputStream inputStream) throws Exception {
+    protected Object importListFromExcel(InputStream inputStream) throws Exception {
         if (inputStream == null) {
             throw new ExcelOpenException("InputStream is null");
         }
         ExcelDataSource excelData = new PoiExcelDataSource(inputStream);
 
-        List<Object> returnList = new ArrayList<Object>();
+        if (!config.getReturnType().isAssignableFrom(List.class)) {
+            throw new ReturnTypeException("ReturnType is not List: " + config.getReturnType().getName());
+        }
 
         for (int row = config.getRowHead(); row < config.getRowHead() + config.getRowNum(); row++) {
             Map<Integer, ColumnConfig> colMap = config.getColMap();
-            Class<?> returnType = config.getReturnType();
+            Type type = config.getReturnType().getGenericSuperclass();
+            if (type == null) {
+                logger.error("Data validate failed : ");
+                continue;
+            }
+            if (type instanceof ParameterizedType) {
+
+            }
             Object obj = returnType.newInstance();
             for (ColumnConfig colConf : colMap.values()) {
-                Object val = excelData.getValue(row, colConf.getColumn(), colConf.getExcelFormat(), colConf.getJavaType());
+                Object val = excelData.getValue(config.getSheetName(), row, colConf.getColumn(), colConf.getExcelFormat(), colConf.getJavaType());
                 DataValidator validator = colConf.getDataValidator().newInstance();
                 ResultObject validateResult = validator.validate(val);
                 String setterName = StringUtil.setterName(colConf.getProperty());
@@ -85,6 +93,9 @@ public abstract class ExcelHandler {
             }
         }
 
+        List<Object> returnList = new ArrayList<Object>();
+
+
         return returnList;
     }
 
@@ -92,6 +103,4 @@ public abstract class ExcelHandler {
         // TODO
         return null;
     }
-
-    protected abstract Object getValue(int row, int col, ExcelFormat excelFormat, Class<?> javaFormat);
 }

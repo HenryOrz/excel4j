@@ -32,7 +32,6 @@ public class MapperProxy implements InvocationHandler {
     }
 
     protected ExcelHandler getDefaultExcelHandler(SheetConfig config){
-        ExcelHandler excelHandler = PoiExcelHandler.newInstance(config);
-        return excelHandler;
+        return new ExcelHandler(config);
     }
 }

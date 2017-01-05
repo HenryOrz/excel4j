@@ -5,6 +5,12 @@ public class ResultObject {
     private String message;
     private Object data;
 
+    public ResultObject(Boolean flag, String message, Object data){
+        this.flag = flag;
+        this.message = message;
+        this.data = data;
+    }
+
     public boolean getFlag() {
         return flag;
     }

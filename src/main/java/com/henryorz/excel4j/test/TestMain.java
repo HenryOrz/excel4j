@@ -15,7 +15,7 @@ public class TestMain {
     public static void main(String[] args) throws FileNotFoundException {
         MapperProxyFactory<TestInterface> factory = new MapperProxyFactory(TestInterface.class);
         TestInterface testInterface = factory.newInstance(new MapperProxy());
-        InputStream in = new FileInputStream("E:/test.xls");
+        InputStream in = new FileInputStream("E:/test.xlsx");
         Object res = testInterface.testMethod(in);
         System.out.println(res);
     }

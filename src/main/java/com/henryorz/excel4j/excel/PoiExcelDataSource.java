@@ -31,11 +31,11 @@ public class PoiExcelDataSource implements ExcelDataSource{
         try{
             workbook = new XSSFWorkbook(inputStream);
         } catch (Exception e1) {
-            logger.warn("open as xlsx failed, cause: {}" + e1.getCause());
+            logger.warn("open as xlsx failed, cause: {}", e1.getCause());
             try {
                 workbook = new HSSFWorkbook(inputStream);
             } catch (Exception e2) {
-                logger.warn("open as xls failed, cause: {}" + e1.getCause());
+                logger.warn("open as xls failed, cause: {}", e1.getCause());
                 throw e2;
             }
         }

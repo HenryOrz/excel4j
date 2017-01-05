@@ -22,8 +22,6 @@ public @interface Column {
 
     Class<?> javaType() default void.class;
 
-    Class<? extends TypeHandler<?>> typeHandler() default DefaultTypeHandler.class;
-
-    Class<? extends DataValidator<?>> dataValidator() default DefaultDataValidator.class;
+    Class<? extends DataValidator> dataValidator() default DefaultDataValidator.class;
 
 }

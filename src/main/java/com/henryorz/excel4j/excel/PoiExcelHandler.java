@@ -36,12 +36,12 @@ public class PoiExcelHandler extends ExcelHandler {
         try{
             wb = new XSSFWorkbook(inputStream);
         } catch (Exception e1) {
-            logger.warn("open as xlsx failed, cause: {}" + e1.getCause());
+            logger.warn("open as xlsx failed, cause: {}", e1.getCause());
             try {
                 wb = new HSSFWorkbook(inputStream);
             } catch (Exception e2) {
-                logger.warn("open as xls failed, cause: {}" + e1.getCause());
-                throw e2;
+                logger.error("open as xls failed, cause: {}", e2.getCause());
+                throw new ExcelException("open excel failed", e2);
             }
         }
         if(wb == null){
@@ -54,7 +54,7 @@ public class PoiExcelHandler extends ExcelHandler {
                 Object bean = getBeanFromRow(row);
                 returnList.add(bean);
             }catch (Exception e){
-                logger.error("get bean from row failed: " + e.getCause());
+                logger.error("get bean from row failed: {}", e.getCause());
                 continue;
             }
         }
