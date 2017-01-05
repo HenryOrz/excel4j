@@ -5,11 +5,11 @@ package com.henryorz.excel4j.type;
  */
 public enum ExcelFormat {
 
-    Default,
+    DEFAULT,
 
     STRING,
 
-    NUM,
+    NUMERIC,
 
     DATE,
 }

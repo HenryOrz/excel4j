@@ -16,7 +16,7 @@ import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.*;
 
-
+@Deprecated
 public class PoiExcelHandler extends ExcelHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(PoiExcelHandler.class);
@@ -80,7 +80,7 @@ public class PoiExcelHandler extends ExcelHandler {
             String setterName = StringUtil.setterName(cc.getProperty());
             Method method = returnType.getDeclaredMethod(setterName);
             Object arg = row.getCell(i);
-            method.invoke(retObj, new Object[]{arg});
+//            method.invoke(retObj, new Object[]{arg});
         }
         return retObj;
     }
