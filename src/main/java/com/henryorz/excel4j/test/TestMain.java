@@ -7,9 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-/**
- * Created by 周恒睿 on 2016/12/29.
- */
+
 public class TestMain {
 
     public static void main(String[] args) throws FileNotFoundException {

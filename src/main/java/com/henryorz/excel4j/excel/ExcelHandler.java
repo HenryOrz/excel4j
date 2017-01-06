@@ -11,8 +11,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 import java.util.*;
 
 public class ExcelHandler {
@@ -57,26 +55,40 @@ public class ExcelHandler {
         return null;
     }
 
-    protected Object importListFromExcel(InputStream inputStream) throws Exception {
+    protected Object importExcel(InputStream inputStream) throws Exception {
         if (inputStream == null) {
             throw new ExcelOpenException("InputStream is null");
         }
         ExcelDataSource excelData = new PoiExcelDataSource(inputStream);
 
-        if (!config.getReturnType().isAssignableFrom(List.class)) {
-            throw new ReturnTypeException("ReturnType is not List: " + config.getReturnType().getName());
-        }
+        if (List.class.isAssignableFrom(config.getReturnType()) && config.getParameterizedType()!=null) {
 
-        for (int row = config.getRowHead(); row < config.getRowHead() + config.getRowNum(); row++) {
+            List<Object> returnList = new ArrayList<Object>();
+            Class<?> returnType=config.getParameterizedType();
+
+            for (int row = config.getRowHead(); row < config.getRowHead() + config.getRowNum(); row++) {
+                Map<Integer, ColumnConfig> colMap = config.getColMap();
+                Object obj = returnType.newInstance();
+                for (ColumnConfig colConf : colMap.values()) {
+                    Object val = excelData.getValue(config.getSheetName(), row, colConf.getColumn(), colConf.getExcelFormat(), colConf.getJavaType());
+                    DataValidator validator = colConf.getDataValidator().newInstance();
+                    ResultObject validateResult = validator.validate(val);
+                    String setterName = StringUtil.setterName(colConf.getProperty());
+                    Class<?> parameterType = returnType.getDeclaredField(colConf.getProperty()).getType();
+                    Method setter = returnType.getDeclaredMethod(setterName, parameterType);
+                    setter.invoke(obj, val);
+                    if (validateResult.getFlag()) {
+                        returnList.add(obj);
+                    } else {
+                        logger.error("Data validate failed : " + validateResult.getMessage());
+                    }
+                }
+            }
+            return returnList;
+        }else if(!Collections.class.isAssignableFrom(config.getReturnType())){
+            Class<?> returnType=config.getReturnType();
+            int row = config.getRowHead();
             Map<Integer, ColumnConfig> colMap = config.getColMap();
-            Type type = config.getReturnType().getGenericSuperclass();
-            if (type == null) {
-                logger.error("Data validate failed : ");
-                continue;
-            }
-            if (type instanceof ParameterizedType) {
-
-            }
             Object obj = returnType.newInstance();
             for (ColumnConfig colConf : colMap.values()) {
                 Object val = excelData.getValue(config.getSheetName(), row, colConf.getColumn(), colConf.getExcelFormat(), colConf.getJavaType());
@@ -86,17 +98,13 @@ public class ExcelHandler {
                 Method method = returnType.getDeclaredMethod(setterName);
                 method.invoke(obj, val);
                 if (validateResult.getFlag()) {
-                    returnList.add(obj);
+                    return obj;
                 } else {
                     logger.error("Data validate failed : " + validateResult.getMessage());
                 }
             }
         }
-
-        List<Object> returnList = new ArrayList<Object>();
-
-
-        return returnList;
+        throw new ReturnTypeException("Unsupported return type: " + config.getReturnType());
     }
 
     protected InputStream exportExcel() {

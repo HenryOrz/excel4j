@@ -21,13 +21,10 @@ public class PoiExcelDataSource implements ExcelDataSource{
 
     private static Logger logger = LoggerFactory.getLogger(PoiExcelDataSource.class);
 
-    private InputStream inputStream;
     private Workbook workbook;
-//    private Sheet sheet;
     private Map<String, Sheet> sheetMap = new HashMap<String, Sheet>();
 
     public PoiExcelDataSource(InputStream inputStream) throws Exception {
-        this.inputStream = inputStream;
         try{
             workbook = new XSSFWorkbook(inputStream);
         } catch (Exception e1) {
@@ -97,8 +94,8 @@ public class PoiExcelDataSource implements ExcelDataSource{
     }
 
     private String getStringValue(Cell cell, ExcelFormat excelFormat) throws ExcelGetValueException{
-        if(!(excelFormat.equals(ExcelFormat.STRING)&&excelFormat.equals(ExcelFormat.DEFAULT))) {
-            logger.warn("ExcelFormat not match: " + cell.getRowIndex() + cell.getColumnIndex());
+        if(excelFormat!=ExcelFormat.STRING&&excelFormat!=ExcelFormat.DEFAULT) {
+            logger.warn("ExcelFormat not match: ({}, {})", cell.getRowIndex(), cell.getColumnIndex());
         }
         try{
             String cellValue = cell.getStringCellValue();
@@ -109,7 +106,7 @@ public class PoiExcelDataSource implements ExcelDataSource{
     }
 
     private Double getNumericValue(Cell cell, ExcelFormat excelFormat) throws ExcelGetValueException{
-        if(!(excelFormat.equals(ExcelFormat.NUMERIC)&&excelFormat.equals(ExcelFormat.DEFAULT))) {
+        if(excelFormat!=ExcelFormat.NUMERIC && excelFormat!=ExcelFormat.DEFAULT) {
             logger.warn("ExcelFormat not match: " + cell.getRowIndex() + cell.getColumnIndex());
         }
         try{
@@ -121,7 +118,7 @@ public class PoiExcelDataSource implements ExcelDataSource{
     }
 
     private Date getDateValue(Cell cell, ExcelFormat excelFormat) throws ExcelGetValueException{
-        if(!(excelFormat.equals(ExcelFormat.DATE)&&excelFormat.equals(ExcelFormat.DEFAULT))) {
+        if(excelFormat!=ExcelFormat.DATE && excelFormat!=ExcelFormat.DEFAULT) {
             logger.warn("ExcelFormat not match: " + cell.getRowIndex() + cell.getColumnIndex());
         }
         try{
@@ -133,7 +130,7 @@ public class PoiExcelDataSource implements ExcelDataSource{
     }
 
     private Boolean getBooleanValue(Cell cell, ExcelFormat excelFormat) throws ExcelGetValueException{
-        if(!(excelFormat.equals(ExcelFormat.DATE)&&excelFormat.equals(ExcelFormat.DEFAULT))) {
+        if(!(excelFormat.equals(ExcelFormat.BOOLEAN)&&excelFormat.equals(ExcelFormat.DEFAULT))) {
             logger.warn("ExcelFormat not match: " + cell.getRowIndex() + cell.getColumnIndex());
         }
         try{

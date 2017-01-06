@@ -23,8 +23,8 @@ public interface TestInterface {
             colHead = 0,
             colNum = 2)
     @Columns({
-            @Column(column = 0, property = "name", excelFormat = ExcelFormat.STRING),
-            @Column(column = 1, property = "descp", excelFormat = ExcelFormat.STRING),
+            @Column(column = 0, property = "name", excelFormat = ExcelFormat.DEFAULT, javaType = String.class),
+            @Column(column = 1, property = "descp", excelFormat = ExcelFormat.DEFAULT, javaType = String.class),
     })
-    List<Object> testMethod(InputStream in);
+    List<TestBean> testMethod(InputStream in);
 }

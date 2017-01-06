@@ -20,7 +20,7 @@ public @interface Column {
 
     ExcelFormat excelFormat();
 
-    Class<?> javaType() default void.class;
+    Class<?> javaType();
 
     Class<? extends DataValidator> dataValidator() default DefaultDataValidator.class;
 

@@ -12,4 +12,6 @@ public enum ExcelFormat {
     NUMERIC,
 
     DATE,
+
+    BOOLEAN,
 }

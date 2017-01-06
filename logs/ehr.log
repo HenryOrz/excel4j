@@ -161,3 +161,56 @@
 	at com.sun.proxy.$Proxy0.testMethod(Unknown Source) [?:?]
 	at com.henryorz.excel4j.test.TestMain.main(TestMain.java:19) [classes/:?]
 
+2017.01.06 at 18:13:31 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 10
+2017.01.06 at 18:13:56 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 10
+2017.01.06 at 18:14:54 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 10
+2017.01.06 at 18:15:59 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 10
+2017.01.06 at 18:26:37 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 10
+2017.01.06 at 18:26:37 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 11
+2017.01.06 at 18:26:37 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 20
+2017.01.06 at 18:26:37 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 21
+2017.01.06 at 18:26:37 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 30
+2017.01.06 at 18:26:37 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 31
+2017.01.06 at 18:27:07 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 10
+2017.01.06 at 18:27:07 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 11
+2017.01.06 at 18:27:07 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 20
+2017.01.06 at 18:27:07 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 21
+2017.01.06 at 18:27:07 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 30
+2017.01.06 at 18:27:07 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 31
+2017.01.06 at 18:30:30 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 10
+2017.01.06 at 18:30:30 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 11
+2017.01.06 at 18:30:30 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 20
+2017.01.06 at 18:30:30 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 21
+2017.01.06 at 18:30:30 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 30
+2017.01.06 at 18:30:30 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 101 getStringValue - ExcelFormat not match: 31
+2017.01.06 at 18:46:39 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+2017.01.06 at 18:46:39 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+2017.01.06 at 18:46:39 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+2017.01.06 at 18:46:39 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+2017.01.06 at 18:46:39 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+2017.01.06 at 18:46:39 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+2017.01.06 at 18:47:40 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+2017.01.06 at 18:47:40 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+2017.01.06 at 18:47:40 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+2017.01.06 at 18:47:40 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+2017.01.06 at 18:47:40 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+2017.01.06 at 18:47:40 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+2017.01.06 at 18:48:14 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+2017.01.06 at 18:48:14 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+2017.01.06 at 18:48:14 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+2017.01.06 at 18:48:14 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+2017.01.06 at 18:48:14 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+2017.01.06 at 18:48:14 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+2017.01.06 at 18:49:03 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+2017.01.06 at 18:49:03 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+2017.01.06 at 18:49:03 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+2017.01.06 at 18:49:03 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+2017.01.06 at 18:49:03 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+2017.01.06 at 18:49:03 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+2017.01.06 at 18:50:12 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+2017.01.06 at 18:50:18 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+2017.01.06 at 18:50:19 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+2017.01.06 at 18:50:19 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+2017.01.06 at 18:50:35 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+2017.01.06 at 18:51:19 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+2017.01.06 at 18:51:43 CST WARN  com.henryorz.excel4j.excel.PoiExcelDataSource -1 getStringValue - ExcelFormat not match: (1, 0)

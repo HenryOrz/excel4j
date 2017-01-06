@@ -15,6 +15,7 @@ public class SheetConfig {
     private int colHead;
     private int colNum;
     private Class<?> returnType;
+    private Class<?> parameterizedType;
     private Map<Integer, ColumnConfig> colMap = new HashMap<Integer, ColumnConfig>();
 
     public String getSheetName() {
@@ -87,6 +88,14 @@ public class SheetConfig {
 
     public void setColMap(Map<Integer, ColumnConfig> colMap) {
         this.colMap = colMap;
+    }
+
+    public Class<?> getParameterizedType() {
+        return parameterizedType;
+    }
+
+    public void setParameterizedType(Class<?> parameterizedType) {
+        this.parameterizedType = parameterizedType;
     }
 
     public void putColMap(Integer column, ColumnConfig columnConfig) {
