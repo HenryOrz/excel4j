@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class PoiExcelDataSource implements ExcelDataSource{
+public class PoiImportDataSource implements ExcelImportDataSource {
 
-    private static Logger logger = LoggerFactory.getLogger(PoiExcelDataSource.class);
+    private static Logger logger = LoggerFactory.getLogger(PoiImportDataSource.class);
 
     private Workbook workbook;
     private Map<String, Sheet> sheetMap = new HashMap<String, Sheet>();
 
-    public PoiExcelDataSource(InputStream inputStream) throws Exception {
+    public PoiImportDataSource(InputStream inputStream) throws Exception {
         try{
             workbook = new XSSFWorkbook(inputStream);
         } catch (Exception e1) {

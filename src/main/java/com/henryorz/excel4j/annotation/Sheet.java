@@ -1,6 +1,7 @@
 package com.henryorz.excel4j.annotation;
 
 import com.henryorz.excel4j.config.Operation;
+import com.henryorz.excel4j.type.ExcelFileType;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -19,7 +20,7 @@ public @interface Sheet {
 
     Operation operation();
 
-    boolean hasTitle();
+    boolean hasTitle() default true;
 
     int rowHead() default 0;
 
@@ -28,4 +29,6 @@ public @interface Sheet {
     int colHead() default 0;
 
     int colNum();
+
+    ExcelFileType fileType() default ExcelFileType.XLSX;
 }

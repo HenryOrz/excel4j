@@ -6,6 +6,7 @@ import com.henryorz.excel4j.proxy.MapperProxyFactory;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.List;
 
 
 public class TestMain {
@@ -14,7 +15,7 @@ public class TestMain {
         MapperProxyFactory<TestInterface> factory = new MapperProxyFactory(TestInterface.class);
         TestInterface testInterface = factory.newInstance(new MapperProxy());
         InputStream in = new FileInputStream("E:/test.xlsx");
-        Object res = testInterface.testMethod(in);
+        List<TestBean> res = testInterface.testMethod(in);
         System.out.println(res);
     }
 }

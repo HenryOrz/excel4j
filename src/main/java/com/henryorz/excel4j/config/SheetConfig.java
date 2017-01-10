@@ -1,5 +1,7 @@
 package com.henryorz.excel4j.config;
 
+import com.henryorz.excel4j.type.ExcelFileType;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,6 +19,7 @@ public class SheetConfig {
     private Class<?> returnType;
     private Class<?> parameterizedType;
     private Map<Integer, ColumnConfig> colMap = new HashMap<Integer, ColumnConfig>();
+    private ExcelFileType fileType;
 
     public String getSheetName() {
         return sheetName;
@@ -34,7 +37,7 @@ public class SheetConfig {
         this.operation = operation;
     }
 
-    public boolean isHasTitle() {
+    public boolean hasTitle() {
         return hasTitle;
     }
 
@@ -100,5 +103,13 @@ public class SheetConfig {
 
     public void putColMap(Integer column, ColumnConfig columnConfig) {
         this.colMap.put(column, columnConfig);
+    }
+
+    public ExcelFileType getFileType() {
+        return fileType;
+    }
+
+    public void setFileType(ExcelFileType fileType) {
+        this.fileType = fileType;
     }
 }
