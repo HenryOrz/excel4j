@@ -161,56 +161,104 @@
 	at com.sun.proxy.$Proxy0.testMethod(Unknown Source) [?:?]
 	at com.henryorz.excel4j.test.TestMain.main(TestMain.java:19) [classes/:?]
 
-18:13:31.632 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 10
-18:13:56.282 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 10
-18:14:54.829 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 10
-18:15:59.491 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 10
-18:26:37.805 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 10
-18:26:37.809 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 11
-18:26:37.810 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 20
-18:26:37.810 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 21
-18:26:37.811 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 30
-18:26:37.811 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 31
-18:27:07.669 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 10
-18:27:07.675 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 11
-18:27:07.675 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 20
-18:27:07.676 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 21
-18:27:07.676 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 30
-18:27:07.676 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 31
-18:30:30.468 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 10
-18:30:30.472 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 11
-18:30:30.473 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 20
-18:30:30.473 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 21
-18:30:30.473 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 30
-18:30:30.473 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 101 getStringValue - ExcelFormat not match: 31
-18:46:39.926 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
-18:46:39.931 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
-18:46:39.931 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
-18:46:39.932 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
-18:46:39.932 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
-18:46:39.932 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
-18:47:40.583 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
-18:47:40.588 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
-18:47:40.589 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
-18:47:40.589 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
-18:47:40.589 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
-18:47:40.589 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
-18:48:14.889 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
-18:48:14.891 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
-18:48:14.892 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
-18:48:14.892 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
-18:48:14.892 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
-18:48:14.893 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
-18:49:03.434 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
-18:49:03.438 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
-18:49:03.439 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
-18:49:03.439 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
-18:49:03.439 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
-18:49:03.439 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
-18:50:12.132 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
-18:50:18.027 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
-18:50:19.162 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
-18:50:19.722 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
-18:50:35.771 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
-18:51:19.906 WARN  com.henryorz.excel4j.excel.PoiImportDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
-18:51:43.473 WARN  com.henryorz.excel4j.excel.PoiImportDataSource -1 getStringValue - ExcelFormat not match: (1, 0)
+18:13:31.632 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 10
+18:13:56.282 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 10
+18:14:54.829 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 10
+18:15:59.491 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 10
+18:26:37.805 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 10
+18:26:37.809 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 11
+18:26:37.810 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 20
+18:26:37.810 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 21
+18:26:37.811 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 30
+18:26:37.811 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 31
+18:27:07.669 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 10
+18:27:07.675 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 11
+18:27:07.675 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 20
+18:27:07.676 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 21
+18:27:07.676 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 30
+18:27:07.676 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 31
+18:30:30.468 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 10
+18:30:30.472 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 11
+18:30:30.473 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 20
+18:30:30.473 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 21
+18:30:30.473 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 30
+18:30:30.473 WARN  com.henryorz.excel4j.excel.PoiDataSource 101 getStringValue - ExcelFormat not match: 31
+18:46:39.926 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+18:46:39.931 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+18:46:39.931 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+18:46:39.932 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+18:46:39.932 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+18:46:39.932 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+18:47:40.583 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+18:47:40.588 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+18:47:40.589 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+18:47:40.589 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+18:47:40.589 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+18:47:40.589 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+18:48:14.889 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+18:48:14.891 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+18:48:14.892 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+18:48:14.892 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+18:48:14.892 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+18:48:14.893 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+18:49:03.434 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+18:49:03.438 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+18:49:03.439 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+18:49:03.439 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+18:49:03.439 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+18:49:03.439 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+18:50:12.132 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 0)
+18:50:18.027 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (1, 1)
+18:50:19.162 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 0)
+18:50:19.722 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (2, 1)
+18:50:35.771 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 0)
+18:51:19.906 WARN  com.henryorz.excel4j.excel.PoiDataSource 98 getStringValue - ExcelFormat not match: (3, 1)
+18:51:43.473 WARN  com.henryorz.excel4j.excel.PoiDataSource -1 getStringValue - ExcelFormat not match: (1, 0)
+16:07:35.628 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:07:35.660 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:07:35.661 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:07:35.661 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:07:35.662 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:07:35.662 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:07:35.662 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:07:35.663 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:05.331 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:05.332 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:05.332 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:05.332 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:05.333 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:05.333 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:05.333 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:05.333 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:34.983 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:35.010 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:35.010 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:35.011 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:35.011 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:35.011 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:35.011 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:11:35.011 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:14:37.631 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:17:33.015 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:18:09.021 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:18:54.205 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:18:54.907 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:18:55.467 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:18:57.419 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:18:57.419 WARN  com.henryorz.excel4j.excel.ExcelHandler 160 exportExcel - No such Method : 
+16:19:27.147 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:19:27.148 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:19:27.148 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:19:27.148 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:19:27.148 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:19:27.148 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:19:27.149 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:19:27.149 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:21:00.203 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:21:00.204 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:21:00.204 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:21:00.205 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:21:00.205 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:21:00.205 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:21:00.205 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 
+16:21:00.205 WARN  com.henryorz.excel4j.excel.ExcelHandler 161 exportExcel - No such Method : 

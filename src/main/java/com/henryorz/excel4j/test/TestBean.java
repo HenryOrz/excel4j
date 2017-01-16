@@ -7,6 +7,15 @@ public class TestBean {
     private String name;
     private String descp;
 
+    public TestBean(){
+
+    }
+
+    public TestBean(String name, String descp) {
+        this.name = name;
+        this.descp = descp;
+    }
+
     public String getName() {
         return name;
     }

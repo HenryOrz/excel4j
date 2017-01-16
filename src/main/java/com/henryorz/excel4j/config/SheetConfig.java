@@ -3,6 +3,7 @@ package com.henryorz.excel4j.config;
 import com.henryorz.excel4j.type.ExcelFileType;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,7 +18,8 @@ public class SheetConfig {
     private int colHead;
     private int colNum;
     private Class<?> returnType;
-    private Class<?> parameterizedType;
+    private Class<?> parameterizedReturnType;
+    private List<Class<?>> parameterizedParamType;
     private Map<Integer, ColumnConfig> colMap = new HashMap<Integer, ColumnConfig>();
     private ExcelFileType fileType;
 
@@ -93,14 +95,21 @@ public class SheetConfig {
         this.colMap = colMap;
     }
 
-    public Class<?> getParameterizedType() {
-        return parameterizedType;
+    public Class<?> getParameterizedReturnType() {
+        return parameterizedReturnType;
     }
 
-    public void setParameterizedType(Class<?> parameterizedType) {
-        this.parameterizedType = parameterizedType;
+    public void setParameterizedReturnType(Class<?> parameterizedReturnType) {
+        this.parameterizedReturnType = parameterizedReturnType;
     }
 
+    public List<Class<?>> getParameterizedParamType() {
+        return parameterizedParamType;
+    }
+
+    public void setParameterizedParamType(List<Class<?>> parameterizedParamType) {
+        this.parameterizedParamType = parameterizedParamType;
+    }
     public void putColMap(Integer column, ColumnConfig columnConfig) {
         this.colMap.put(column, columnConfig);
     }

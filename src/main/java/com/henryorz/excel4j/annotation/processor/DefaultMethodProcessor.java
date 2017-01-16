@@ -7,14 +7,8 @@ import com.henryorz.excel4j.config.ColumnConfig;
 import com.henryorz.excel4j.config.SheetConfig;
 
 import java.lang.reflect.*;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-/**
- * Created by 周恒睿 on 2016/12/28.
- */
 public class DefaultMethodProcessor implements MethodProcessor {
 
     private Method method;
@@ -36,9 +30,9 @@ public class DefaultMethodProcessor implements MethodProcessor {
         Class<?> returnType = method.getReturnType();
         sheetConfig.setReturnType(returnType);
 
-        Type type = method.getGenericReturnType();
-        if (type != null && type instanceof ParameterizedType) {
-            ParameterizedType parameterizedType = (ParameterizedType) type;
+        Type genericReturnType = method.getGenericReturnType();
+        if (genericReturnType != null && genericReturnType instanceof ParameterizedType) {
+            ParameterizedType parameterizedType = (ParameterizedType) genericReturnType;
             Class<?> rawType = (Class<?>) parameterizedType.getRawType();
             if (Collection.class.isAssignableFrom(rawType)) {
                 Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();
@@ -46,11 +40,32 @@ public class DefaultMethodProcessor implements MethodProcessor {
                     Type returnTypeParameter = actualTypeArguments[0];
                     if (returnTypeParameter instanceof Class<?>) {
                         Class<?> parameterizedReturnType = (Class<?>) returnTypeParameter;
-                        sheetConfig.setParameterizedType(parameterizedReturnType);
+                        sheetConfig.setParameterizedReturnType(parameterizedReturnType);
                     }
                 }
             }
         }
+
+        //TODO
+        Type[] genericParameterTypes = method.getGenericParameterTypes();
+        List<Class<?>> paramTypeParameterList = new ArrayList<Class<?>>();
+        for(Type item : genericParameterTypes){
+            if (item != null && item instanceof ParameterizedType) {
+                ParameterizedType type = (ParameterizedType) item;
+                Class<?> rawType = (Class<?>) type.getRawType();
+                if (Collection.class.isAssignableFrom(rawType)) {
+                    Type[] actualTypeArguments = type.getActualTypeArguments();
+                    if (actualTypeArguments != null && actualTypeArguments.length == 1) {
+                        Type paramTypeParameter = actualTypeArguments[0];
+                        if (paramTypeParameter instanceof Class<?>) {
+                            Class<?> parameterizedParmType = (Class<?>) paramTypeParameter;
+                            paramTypeParameterList.add(parameterizedParmType);
+                        }
+                    }
+                }
+            }
+        }
+        sheetConfig.setParameterizedReturnType(paramTypeParameter);
 
         sheetConfig.setHasTitle(sheetAnn.hasTitle());
         sheetConfig.setSheetName(sheetAnn.sheetName());

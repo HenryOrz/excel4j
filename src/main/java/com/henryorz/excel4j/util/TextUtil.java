@@ -1,6 +1,6 @@
 package com.henryorz.excel4j.util;
 
-public class StringUtil {
+public class TextUtil {
     public static String getterName(String propertyName){
         return  "get" + propertyName.substring(0,1).toUpperCase() + propertyName.substring(1);
     }

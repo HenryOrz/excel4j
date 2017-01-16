@@ -1,7 +1,6 @@
 package com.henryorz.excel4j.proxy;
 
 import com.henryorz.excel4j.annotation.processor.MethodProcessor;
-import com.henryorz.excel4j.excel.PoiExcelHandler;
 import com.henryorz.excel4j.annotation.processor.DefaultMethodProcessor;
 import com.henryorz.excel4j.config.SheetConfig;
 import com.henryorz.excel4j.excel.ExcelHandler;
@@ -11,9 +10,6 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by 周恒睿 on 2016/12/29.
- */
 public class MapperProxy implements InvocationHandler {
 
     private Map<Method, ExcelHandler> handlerMap = new HashMap<Method, ExcelHandler>();
